@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TheNewThinkTank</title>
     <link rel="stylesheet" href="main.css">
+    <meta name="description" content="Personal website of Gustav Collin Rasmussen showcasing talks, publications, projects, and achievements.">
+    <meta name="keywords" content="Gustav Collin Rasmussen, talks, publications, projects, AWS GameDay, PyCon DE">
+    <meta name="author" content="Gustav Collin Rasmussen">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
@@ -19,6 +23,16 @@
                 <li><a href="#gallery">Gallery</a></li>
             </ul>
         </nav>
+
+        <button id="dark-mode-toggle">Toggle Dark Mode</button>
+
+        <script>
+            const toggle = document.getElementById('dark-mode-toggle');
+            toggle.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+            });
+        </script>
+
     </header>
 
     <main>
@@ -70,7 +84,13 @@
     </main>
 
     <footer>
-        <!-- Footer content -->
+        <p>&copy; 2024 Gustav Collin Rasmussen. All rights reserved.</p>
+    
+        <p>
+            Connect with me on 
+            <a href="https://www.linkedin.com/in/gustav-collin-rasmussen/" target="_blank">LinkedIn</a>.
+        </p>
+    
     </footer>
 
 </body>
