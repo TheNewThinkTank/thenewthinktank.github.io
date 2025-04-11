@@ -22,3 +22,25 @@ h2 {
     border-bottom: 2px solid #333;
     padding-bottom: 5px;
 }
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background: #444;
+    margin: 0;
+}
+nav ul li {
+    margin: 0 10px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+nav ul li a:hover {
+    background: #555;
+    border-radius: 5px;
+}
