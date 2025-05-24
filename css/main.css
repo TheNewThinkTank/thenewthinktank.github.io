@@ -89,3 +89,24 @@ body.dark-mode {
 header.dark-mode, footer.dark-mode {
     background: #1e1e1e;
 }
+
+body.dark-mode .container {
+    background: #181818;
+    color: #fff;
+}
+
+body.dark-mode section {
+    background: #181818;
+}
+
+body.dark-mode a {
+    color: #90caf9;
+}
+
+body.dark-mode nav ul {
+    background: #222;
+}
+
+body.dark-mode nav ul li a:hover {
+    background: #333;
+}
