@@ -1,11 +1,26 @@
-
 document.addEventListener('DOMContentLoaded', function () {
     const toggle = document.getElementById('dark-mode-toggle');
+    const body = document.body;
+    const header = document.querySelector('header');
+    const footer = document.querySelector('footer');
+
+    // Apply saved mode on load
+    if (localStorage.getItem('darkMode') === 'enabled') {
+        body.classList.add('dark-mode');
+        header.classList.add('dark-mode');
+        footer.classList.add('dark-mode');
+    }
+
     if (toggle) {
         toggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            document.querySelector('header').classList.toggle('dark-mode');
-            document.querySelector('footer').classList.toggle('dark-mode');
+            const enabled = body.classList.toggle('dark-mode');
+            header.classList.toggle('dark-mode');
+            footer.classList.toggle('dark-mode');
+            if (enabled) {
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                localStorage.removeItem('darkMode');
+            }
         });
     }
 });
