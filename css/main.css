@@ -2,7 +2,7 @@
 .logo-img {
     width: 200px;
     height: 200px;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     display: block;
     margin: 0 auto;
     object-fit: contain; /* or try object-fit: cover */
