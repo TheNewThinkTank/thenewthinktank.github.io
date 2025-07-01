@@ -164,3 +164,26 @@ body.dark-mode nav ul {
 body.dark-mode nav ul li a:hover {
     background: #333;
 }
+
+.testimonials {
+    margin: 2rem 0;
+    padding: 1rem 2rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+.testimonials h2 {
+    margin-top: 0;
+}
+.testimonials blockquote {
+    margin: 1.5rem 0;
+    padding-left: 1rem;
+    border-left: 4px solid #007bff;
+    font-style: italic;
+    background: none;
+}
+.testimonials footer {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.95em;
+    color: #555;
+}
