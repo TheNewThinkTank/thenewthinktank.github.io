@@ -9,18 +9,51 @@
     background: #fff; /* optional: adds a background behind transparent images */
 }
 
+.calligraphy-img {
+    display: block;
+    margin: 0 auto 1rem auto;
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    /* Remove border-radius if present */
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
 }
+
 header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background: #333;
     color: #fff;
     padding: 1rem;
     text-align: center;
+    position: relative;
 }
+
+.header-row {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.side-logo {
+    align-self: flex-start;
+    margin-top: 1rem;
+    margin-right: auto;
+    max-width: 180px;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 .container {
     max-width: 800px;
     margin: 20px auto;
@@ -68,13 +101,19 @@ img:hover {
     transition: transform 0.3s ease;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     .container {
         padding: 0 10px;
     }
     .gallery img {
         width: 100%;
         margin-bottom: 10px;
+    }
+
+    .side-logo {
+        max-width: 120px;
+        margin: 1rem auto 0 auto;
+        align-self: center;
     }
 }
 
