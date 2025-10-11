@@ -188,9 +188,11 @@ body.dark-mode nav ul li a:hover {
     color: #555;
 }
 
+/* TODO: center images in testimonials */
+
 .testimonial-img {
-    width: 100px;
-    height: 100px;
+    width: 50%;
+    /* height: 100px; */
     border-radius: 50%;
     object-fit: cover;
     display: block;
