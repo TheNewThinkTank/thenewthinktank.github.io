@@ -48,12 +48,14 @@ priority over the device preference. Page controls initialize after parsing.
 
 ## Checks
 
-The browser regression suite is development-only and uses Chromium. It
-requires Node.js 20 or newer and Python 3. Install the test tooling once:
+The browser regression suite is development-only and runs in Chromium,
+Firefox, and WebKit. It requires Node.js 20 or newer and Python 3. Install
+the test tooling once:
 
 ```sh
 npm ci
 npx playwright install chromium --only-shell
+npx playwright install firefox webkit
 ```
 
 Run syntax and browser checks with:
@@ -61,6 +63,11 @@ Run syntax and browser checks with:
 ```sh
 npm test
 ```
+
+This runs the same 14 regressions in each engine, for 42 browser checks.
+For a quicker single-browser run, use `npm test -- --project=chromium`
+(or `firefox` or `webkit`). WebKit coverage is engine testing, not a
+substitute for testing on a physical Safari/iOS device.
 
 The suite starts its own HTTP server on port 4180 and stops it afterward.
 If that port is busy, run `TEST_PORT=4181 npm test` instead. It uses isolated
@@ -77,6 +84,19 @@ the ignored test-results directory.
 
 Use the HTTP preview above for visual checks. The website still requires
 no build step or npm packages to preview or deploy.
+
+## Continuous Integration
+
+[.github/workflows/browser-tests.yml](.github/workflows/browser-tests.yml)
+runs on pushes, pull requests, and manual requests. Separate Ubuntu 24.04
+jobs install Node.js 24, Python 3.12, the locked npm dependencies, and the
+selected browser with its system dependencies, then run that browser's tests.
+
+The workflow has read-only repository permissions, uses official actions
+pinned to immutable revisions, and does not retain checkout credentials.
+Newer runs cancel older runs for the same workflow and Git ref. Failed jobs
+upload available screenshots and traces for seven days. This workflow only
+tests the site; it does not build or deploy it.
 
 ## Sharing Previews
 
