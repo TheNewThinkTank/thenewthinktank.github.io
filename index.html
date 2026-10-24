@@ -9,18 +9,30 @@
     <meta property="og:title" content="New Think Tank | AI &amp; Software Engineering">
     <meta property="og:description" content="Talks, hands-on learning, and consulting for teams building better software.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://thenewthinktank.github.io/img/kcd-hero.jpg">
-    <link rel="icon" href="img/logo.JPG" type="image/jpeg">
+    <meta property="og:site_name" content="New Think Tank">
+    <meta property="og:url" content="https://thenewthinktank.github.io/">
+    <meta property="og:image" content="https://thenewthinktank.github.io/img/social-preview.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="New Think Tank: courses, talks and consulting in AI and software engineering.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="New Think Tank | AI &amp; Software Engineering">
+    <meta name="twitter:description" content="Talks, hands-on learning, and consulting for teams building better software.">
+    <meta name="twitter:image" content="https://thenewthinktank.github.io/img/social-preview.jpg">
+    <meta name="twitter:image:alt" content="New Think Tank: courses, talks and consulting in AI and software engineering.">
+    <link rel="canonical" href="https://thenewthinktank.github.io/">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" sizes="16x16 32x32 48x48">
+    <script src="js/main.js"></script>
     <link rel="stylesheet" href="css/main.css">
     <title>New Think Tank | AI &amp; Software Engineering</title>
-    <script src="js/main.js" defer></script>
 </head>
 <body>
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
         <div class="container header-inner">
             <a class="brand" href="index.html" aria-label="New Think Tank home">
-                <img src="img/logo.JPG" alt="" width="56" height="48">
+                <img src="img/logo-small.png" alt="" width="56" height="48">
                 <span class="brand-text">New Think Tank<small>AI &amp; software engineering</small></span>
             </a>
             <nav class="primary-nav" aria-label="Main navigation">
@@ -39,7 +51,10 @@
     </header>
     <main id="main">
         <section class="hero" aria-labelledby="home-title">
-            <img class="hero-photo" src="img/kcd-hero.jpg" alt="Gustav Rasmussen presenting on stage at KCD Denmark 2024" width="1800" height="2700" fetchpriority="high">
+            <picture>
+                <source type="image/webp" srcset="img/kcd-800.webp 800w, img/kcd-1200.webp 1200w, img/kcd-1800.webp 1800w" sizes="(max-width: 900px) 800px, 100vw">
+                <img class="hero-photo" src="img/kcd-hero.jpg" alt="Gustav Rasmussen presenting on stage at KCD Denmark 2024" width="1800" height="2700" fetchpriority="high">
+            </picture>
             <div class="container hero-content">
                 <h1 id="home-title">New Think Tank</h1>
                 <p class="lead">Talks, courses, and consulting in AI, cloud, and software engineering. Built around your team.</p>
@@ -126,7 +141,7 @@
                 </figure>
                 <div class="feature-copy">
                     <p class="eyebrow">The person behind the work</p>
-                    <h2>Hi, I'm Gustav.</h2>
+                    <h2 id="about-title">Hi, I'm Gustav.</h2>
                     <p>I founded New Think Tank in 2025 to help teams improve how they build software and share technical knowledge.</p>
                     <p>My interests connect applied AI, cloud infrastructure, and software engineering. My talks explore subjects such as GPU workloads, Kubernetes-based ML platforms, and AI-driven drug discovery.</p>
                     <a class="text-link" href="html/profile.html">Meet Gustav &amp; explore the work <span class="icon icon-arrow" aria-hidden="true"></span></a>
