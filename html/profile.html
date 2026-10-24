@@ -3,109 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Think Tank - Profile</title>
-    <link rel="stylesheet" href="../css/main.css">
-    <meta name="description" content="Personal page of Gustav Rasmussen showcasing talks, publications, projects, and achievements.">
-    <meta name="keywords" content="Gustav Rasmussen, talks, publications, projects, AWS GameDay, PyCon DE">
+    <meta name="description" content="Meet Gustav Rasmussen, founder of New Think Tank. Explore talks on AI and Kubernetes, publications, software projects, and community events.">
     <meta name="author" content="Gustav Rasmussen">
-    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
-    <script src="../js/main.js"></script>
+    <meta name="theme-color" content="#215b46">
+    <meta property="og:title" content="Gustav Rasmussen | New Think Tank">
+    <meta property="og:description" content="Software engineering, AI, cloud platforms, and shared knowledge. Talks, publications, and projects by Gustav Rasmussen.">
+    <meta property="og:type" content="profile">
+    <link rel="icon" href="../img/logo.JPG" type="image/jpeg">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>Gustav Rasmussen | New Think Tank</title>
+    <script src="../js/main.js" defer></script>
 </head>
 <body>
-    <header>
-
-        <img src="../img/profile.jpg" alt="Profile" width="200" height="200" style="border-radius: 50%; display: block; margin: 0 auto;">
-
-        <h1>Gustav Rasmussen</h1>
-        <p>Explore my work, talks, and projects.</p>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="catalog.html">Catalog</a></li>
-                <li><a href="#talks">Talks</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#competition-placings">Competition Placings</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-            </ul>
-        </nav>
-
-        <button id="dark-mode-toggle">Toggle Dark Mode</button>
-
-        <!-- <script>
-            const toggle = document.getElementById('dark-mode-toggle');
-            toggle.addEventListener('click', () => {
-                document.body.classList.toggle('dark-mode');
-            });
-        </script> -->
-
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="../index.html" aria-label="New Think Tank home">
+                <img src="../img/logo.JPG" alt="" width="56" height="48">
+                <span class="brand-text">New Think Tank<small>AI &amp; software engineering</small></span>
+            </a>
+            <nav class="primary-nav" aria-label="Main navigation">
+                <a class="nav-link" href="../index.html">Home</a>
+                <a class="nav-link" href="catalog.html">Catalog</a>
+                <a class="nav-link" href="profile.html" aria-current="page">Profile</a>
+            </nav>
+            <div class="header-actions">
+                <a class="text-link header-contact" href="#contact">Let's talk <span class="icon icon-arrow" aria-hidden="true"></span></a>
+                <button class="icon-button" id="dark-mode-toggle" type="button" aria-label="Use dark theme" aria-pressed="false" title="Use dark theme" hidden>
+                    <span class="icon icon-moon" aria-hidden="true"></span>
+                    <span class="icon icon-sun" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
     </header>
 
-    <main>
+    <main id="main">
+        <section class="page-intro" aria-labelledby="profile-title">
+            <div class="container profile-intro">
+                <div>
+                    <p class="eyebrow">Founder, New Think Tank</p>
+                    <h1 id="profile-title">Gustav Rasmussen</h1>
+                    <p class="lead">Working at the intersection of AI, cloud infrastructure, and software engineering.</p>
+                    <p>I founded New Think Tank in 2025 to help teams turn technical knowledge into better development practices. Here are some of the talks, writing, and projects behind that work.</p>
+                    <div class="profile-links">
+                        <a class="text-link" href="https://www.linkedin.com/in/gustav-collin-rasmussen/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn <span class="icon icon-arrow" aria-hidden="true"></span></a>
+                        <a class="text-link" href="https://github.com/TheNewThinkTank" target="_blank" rel="noopener noreferrer">GitHub <span class="icon icon-arrow" aria-hidden="true"></span></a>
+                    </div>
+                </div>
+                <img class="profile-photo" src="../img/profile.jpg" alt="Gustav Rasmussen" width="2048" height="1538" fetchpriority="high">
+            </div>
+            <nav class="container section-nav" aria-label="Profile sections">
+                <a class="text-link" href="#talks">Talks &amp; podcasts</a>
+                <a class="text-link" href="#publications">Publications</a>
+                <a class="text-link" href="#projects">Projects</a>
+                <a class="text-link" href="#competition-placings">Competition</a>
+                <a class="text-link" href="#gallery">Gallery</a>
+            </nav>
+        </section>
+
         <div class="container">
-            <section id="talks">
-                <h2>Talks</h2>
-                <ul>
-                    <li><a href="https://www.youtube.com/watch?v=FC5TAGsBbRQ&ab_channel=CNCF%5BCloudNativeComputingFoundation%5D" target="_blank">KubeCon 2025: "Empowering AI-Driven Drug Discovery: Overcoming Challenges in Building a ML Platform on Kubernetes"</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=33O_hQ73NFg&t=502s&ab_channel=CloudNativeNordics" target="_blank">KCD Denmark 2024 Keynote: "Empowering GPU Workloads: Our Journey on Enabling an ML K8S"</a></li>
-                    <li><a href="https://open.spotify.com/episode/2V4Y1Qseit55MrPuqeNIPC" target="_blank">Evolution Exchange Denmark Podcast - #257: "The Future of Software Development"</a></li>
-                    <li><a href="https://open.spotify.com/episode/4oG9IpZf723kAhe0b1bVWG?si=EV4NvSCoT0GiF8Xva9LDSQ" target="_blank">Evolution Exchange Denmark Podcast - #230: "DevOps in Pharma"</a></li>
+            <section class="content-section" id="talks" aria-labelledby="talks-title">
+                <h2 id="talks-title">Talks &amp; podcasts</h2>
+                <ul class="resource-list">
+                    <li class="resource-item">
+                        <p class="resource-meta">KubeCon + CloudNativeCon Europe / 2025</p>
+                        <a class="resource-title" href="https://www.youtube.com/watch?v=FC5TAGsBbRQ&amp;ab_channel=CNCF%5BCloudNativeComputingFoundation%5D" target="_blank" rel="noopener noreferrer">Empowering AI-Driven Drug Discovery <span class="icon icon-arrow" aria-hidden="true"></span></a>
+                        <p>Overcoming challenges in building an ML platform on Kubernetes.</p>
+                    </li>
+                    <li class="resource-item">
+                        <p class="resource-meta">KCD Denmark keynote / 2024</p>
+                        <a class="resource-title" href="https://www.youtube.com/watch?v=33O_hQ73NFg&amp;t=502s&amp;ab_channel=CloudNativeNordics" target="_blank" rel="noopener noreferrer">Empowering GPU Workloads <span class="icon icon-arrow" aria-hidden="true"></span></a>
+                        <p>Our journey toward enabling a Kubernetes platform for machine learning.</p>
+                    </li>
+                    <li class="resource-item">
+                        <p class="resource-meta">Evolution Exchange Denmark / Episode 257</p>
+                        <a class="resource-title" href="https://open.spotify.com/episode/2V4Y1Qseit55MrPuqeNIPC" target="_blank" rel="noopener noreferrer">The Future of Software Development <span class="icon icon-arrow" aria-hidden="true"></span></a>
+                    </li>
+                    <li class="resource-item">
+                        <p class="resource-meta">Evolution Exchange Denmark / Episode 230</p>
+                        <a class="resource-title" href="https://open.spotify.com/episode/4oG9IpZf723kAhe0b1bVWG?si=EV4NvSCoT0GiF8Xva9LDSQ" target="_blank" rel="noopener noreferrer">DevOps in Pharma <span class="icon icon-arrow" aria-hidden="true"></span></a>
+                    </li>
                 </ul>
             </section>
 
-            <section id="publications">
-                <h2>Publications</h2>
-                <ul>
-                    <li><a href="https://medium.com/@GustavCollinRasmussen/build-a-nutrition-app-on-streamlit-8c4f01229989" target="_blank">Medium: "Build an asynchronous nutrition app on Streamlit"</a></li>
-                    <li><a href="https://www.researchgate.net/publication/344785510_Star_Formation_Between_Merging_Galaxies" target="_blank">ResearchGate: "Star Formation Between Merging Galaxies"</a></li>
-                    <li><a href="https://www.researchgate.net/publication/314913282_Structural_and_dynamical_properties_of_dark_matter_halos" target="_blank">ResearchGate: "Structural and dynamical properties of dark matter halos"</a></li>
+            <section class="content-section" id="publications" aria-labelledby="publications-title">
+                <h2 id="publications-title">Publications</h2>
+                <ul class="resource-list">
+                    <li class="resource-item">
+                        <p class="resource-meta">Software development / Medium</p>
+                        <a class="resource-title" href="https://medium.com/@GustavCollinRasmussen/build-a-nutrition-app-on-streamlit-8c4f01229989" target="_blank" rel="noopener noreferrer">Build an asynchronous nutrition app on Streamlit <span class="icon icon-arrow" aria-hidden="true"></span></a>
+                    </li>
+                    <li class="resource-item">
+                        <p class="resource-meta">Astrophysics / ResearchGate</p>
+                        <a class="resource-title" href="https://www.researchgate.net/publication/344785510_Star_Formation_Between_Merging_Galaxies" target="_blank" rel="noopener noreferrer">Star Formation Between Merging Galaxies <span class="icon icon-arrow" aria-hidden="true"></span></a>
+                    </li>
+                    <li class="resource-item">
+                        <p class="resource-meta">Astrophysics / ResearchGate</p>
+                        <a class="resource-title" href="https://www.researchgate.net/publication/314913282_Structural_and_dynamical_properties_of_dark_matter_halos" target="_blank" rel="noopener noreferrer">Structural and dynamical properties of dark matter halos <span class="icon icon-arrow" aria-hidden="true"></span></a>
+                    </li>
                 </ul>
             </section>
 
-            <section id="projects">
-                <h2>Projects</h2>
-                <ul>
-                    <li><a href="https://github.com/TheNewThinkTank/fitness-tracker" target="_blank">Fitness Tracker</a></li>
-                    <li><a href=" https://gitlab.com/TheNewThinkTank/dojo" target="_blank">Dojo</a></li>
+            <section class="content-section" id="projects" aria-labelledby="projects-title">
+                <h2 id="projects-title">Projects</h2>
+                <ul class="resource-list">
+                    <li class="resource-item">
+                        <p class="resource-meta">GitHub</p>
+                        <a class="resource-title" href="https://github.com/TheNewThinkTank/fitness-tracker" target="_blank" rel="noopener noreferrer">Fitness Tracker <span class="icon icon-arrow" aria-hidden="true"></span></a>
+                    </li>
+                    <li class="resource-item">
+                        <p class="resource-meta">GitLab</p>
+                        <a class="resource-title" href="https://gitlab.com/TheNewThinkTank/dojo" target="_blank" rel="noopener noreferrer">Dojo <span class="icon icon-arrow" aria-hidden="true"></span></a>
+                    </li>
                 </ul>
             </section>
 
-            <section id="competition-placings">
-                <div class="container">
-                    <h2>Competition Placings</h2>
-                    <img src="../img/aws-gameday-2024.jpeg" alt="AWS GameDay 2024" width="300">
-                    <p>1st Place in DK, 3rd in the Nordics - AWS GameDay 2024</p>
+            <section class="content-section" id="competition-placings" aria-labelledby="competition-title">
+                <h2 id="competition-title">Competition</h2>
+                <div class="award-layout">
+                    <img src="../img/aws-gameday-2024.jpeg" alt="The team at AWS GameDay 2024" width="2048" height="1536" loading="lazy">
+                    <div>
+                        <p class="eyebrow">AWS GameDay / 2024</p>
+                        <h3>1st in Denmark.<br>3rd in the Nordics.</h3>
+                        <p>A team result from the AWS GameDay 2024 competition.</p>
+                    </div>
                 </div>
             </section>
 
-            <section id="gallery">
-                <h2>Gallery</h2>
+            <section class="content-section" id="gallery" aria-labelledby="gallery-title">
+                <h2 id="gallery-title">Out in the community</h2>
                 <div class="gallery">
-                    <img src="../img/kcd.jpeg" alt="KCD Denmark 2024" width="300">
-                    <img src="../img/kubecon.jpeg" alt="KubeCon EU 2025" width="300">
-
-                    <img src="../img/podcast-2024.jpeg" alt="Podcast" width="300">
-                    <img src="../img/nn-vienna-2024.jpeg" alt="NN Career Fair Vienna 2024" width="300">
-
-                    <!--
-                    <img src="../img/pycon_de_2023.jpg" alt="PyCon DE 2023" width="300">
-                    <img src="https://lh3.googleusercontent.com/d/12JLQH7Vzmcte5JhzOv-lpi4k_LdtSwhc" alt="DHL 2024" width="300">
-                    -->
+                    <figure>
+                        <a href="../img/kcd.jpeg" target="_blank" rel="noopener noreferrer" title="Open full-size photograph">
+                            <img src="../img/kcd-hero.jpg" alt="Gustav Rasmussen presenting at KCD Denmark 2024" width="1800" height="2700" loading="lazy">
+                        </a>
+                        <figcaption>KCD Denmark / 2024</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="../img/kubecon.jpeg" target="_blank" rel="noopener noreferrer" title="Open full-size photograph">
+                            <img src="../img/kubecon.jpeg" alt="Presenters on stage at KubeCon + CloudNativeCon Europe 2025" width="1200" height="1600" loading="lazy">
+                        </a>
+                        <figcaption>KubeCon + CloudNativeCon Europe / 2025</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="../img/podcast-2024.jpeg" target="_blank" rel="noopener noreferrer" title="Open full-size photograph">
+                            <img src="../img/podcast-2024.jpeg" alt="Gustav Rasmussen and fellow podcast participants in 2024" width="1280" height="1706" loading="lazy">
+                        </a>
+                        <figcaption>Podcast conversations / 2024</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="../img/nn-vienna-2024.jpeg" target="_blank" rel="noopener noreferrer" title="Open full-size photograph">
+                            <img src="../img/nn-vienna-2024.jpeg" alt="Gustav Rasmussen with colleagues at the Novo Nordisk career fair in Vienna" width="800" height="1066" loading="lazy">
+                        </a>
+                        <figcaption>Career fair, Vienna / 2024</figcaption>
+                    </figure>
                 </div>
             </section>
-
         </div>
+
+        <section class="contact-section" id="contact" aria-labelledby="contact-title">
+            <div class="container contact-inner">
+                <div>
+                    <h2 id="contact-title">Let's put that experience to work.</h2>
+                    <p>Get in touch about a talk, a course, or a challenge your team is working through.</p>
+                </div>
+                <a class="button button-light" href="https://www.linkedin.com/in/gustav-collin-rasmussen/" target="_blank" rel="noopener noreferrer">Let's talk on LinkedIn <span class="icon icon-arrow" aria-hidden="true"></span></a>
+            </div>
+        </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Gustav Rasmussen. All rights reserved.</p>
-
-        <p>
-            Connect with me on 
-            <a href="https://www.linkedin.com/in/gustav-collin-rasmussen/" target="_blank">LinkedIn</a>.
-        </p>
-    
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; 2025&ndash;<span data-year>2026</span> Gustav Rasmussen. New Think Tank.</p>
+            <div class="footer-links">
+                <a href="https://github.com/TheNewThinkTank" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.linkedin.com/in/gustav-collin-rasmussen/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
+        </div>
     </footer>
-
 </body>
 </html>

@@ -1,117 +1,326 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Think Tank - Product Catalog</title>
+    <meta name="description" content="Explore courses in AI, Python, AWS, DevOps, and Kubernetes, plus tailored technical talks, workshops, and consulting. Available online and in person.">
+    <meta name="author" content="Gustav Rasmussen">
+    <meta name="theme-color" content="#215b46">
+    <meta property="og:title" content="Catalog | New Think Tank">
+    <meta property="og:description" content="Practical technical learning and expertise, tailored to your team.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="../img/logo.JPG" type="image/jpeg">
     <link rel="stylesheet" href="../css/main.css">
-    <script src="../js/main.js"></script>
+    <title>Catalog | New Think Tank</title>
+    <script src="../js/main.js" defer></script>
 </head>
-
 <body>
-    <header>
-
-        <img src="../img/logo.JPG" alt="Logo" class="logo-img">
-
-        <h1>New Think Tank - Product Catalog</h1>
-
-        <nav>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="catalog.html">Catalog</a></li>
-                <li><a href="profile.html">Profile</a></li>
-            </ul>
-        </nav>
-
-        <button id="dark-mode-toggle">Toggle Dark Mode</button>
-
-    </header>
-    <main>
-
-        <div class="container flex-row">
-            <img src="../img/calligraphy.png" alt="New Think Tank calligraphy logo" class="calligraphy-img side-logo">
-
-            <div>
-                <p>New Think Tank offers talks, courses, workshops and consulting on these topics:</p>
-
-                <ul>
-                    <li>Applied AI</li>
-                    <li>Software Design</li>
-                    <li>Cloud Computing (AWS & Azure)</li>
-                    <li>DevOps</li>
-                    <li>Platform Engineering (K8S etc.)</li>
-                </ul>
-
-                <p>Courses offered:</p>
-
-                <ul>
-                    <li>AI for Everyone</li>
-                    <li>Programming using Python</li>
-                    <li>AWS Solutions Architecture</li>
-                    <li>DevOps Practices</li>
-                    <li>Kubernetes Basics</li>
-                </ul>
-
-                <p>All courses are currently available online as well as in-person.</p>
-                <p>We also offer custom workshops and consulting tailored to your needs.</p>
-
-                <a href="profile.html" class="button">View My Profile</a>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="../index.html" aria-label="New Think Tank home">
+                <img src="../img/logo.JPG" alt="" width="56" height="48">
+                <span class="brand-text">New Think Tank<small>AI &amp; software engineering</small></span>
+            </a>
+            <nav class="primary-nav" aria-label="Main navigation">
+                <a class="nav-link" href="../index.html">Home</a>
+                <a class="nav-link" href="catalog.html" aria-current="page">Catalog</a>
+                <a class="nav-link" href="profile.html">Profile</a>
+            </nav>
+            <div class="header-actions">
+                <a class="text-link header-contact" href="#contact">Let's talk <span class="icon icon-arrow" aria-hidden="true"></span></a>
+                <button class="icon-button" id="dark-mode-toggle" type="button" aria-label="Use dark theme" aria-pressed="false" title="Use dark theme" hidden>
+                    <span class="icon icon-moon" aria-hidden="true"></span>
+                    <span class="icon icon-sun" aria-hidden="true"></span>
+                </button>
             </div>
         </div>
-
-        <section class="testimonials">
-            <h2>Testimonials</h2>
-            <blockquote>
-                <p>
-                    "We had the great pleasure of Gustav coming to our PhD School Symposium May 2025 and host a workshop
-                    on AI/ML and how it is used in big pharma.
-                    From start to finish Gustav was very professional and tailored his workshop to the topics that we
-                    knew we wanted to learn about - and then some. He was spot on and had prepared a very nice
-                    interactive workshop. He was engaging and even stayed for longer answering all the questions we had.
-                    I would highly recommend hiring Gustav for a unique insight in AI/ ML and research in big pharma!"
-                </p>
-                <footer>— Kindly,
-                    Kristina Benedikte V Døssing
-                    University of Copenhagen
-                    Medical and Molecular Imaging Graduate Program
-                    Assistant Professor, PhD Coordinator.
-                </footer>
-                <div align="center">
-                    <img src="../img/ucph-logo.png" alt="UCPH" class="testimonial-img">
-                </div>
-            </blockquote>
-
-            <blockquote>
-                <div align="center">
-                    <img src="../img/miller.JPG" alt="Thomas Miller" class="testimonial-img">
-                </div>
-            </blockquote>
-
-            <!--
-            <blockquote>
-                <p>"The AI course was clear, practical, and inspiring. We saw immediate results."</p>
-                <footer>— Priya S., Data Scientist</footer>
-            </blockquote>
-            <blockquote>
-                <p>"Gustav's consulting helped us migrate to the cloud smoothly and efficiently."</p>
-                <footer>— Lars M., IT Manager</footer>
-            </blockquote>
-            -->
+    </header>
+    <main id="main">
+        <section class="page-intro catalog-intro" aria-labelledby="catalog-title">
+            <div class="container">
+                <h1 id="catalog-title">Courses, talks &amp; consulting.</h1>
+                <p class="delivery-note">Online or in person. Tailored to your audience and goals.</p>
+                <nav class="section-nav" aria-label="Catalog sections">
+                    <a class="text-link" href="#courses">Courses</a>
+                    <a class="text-link" href="#talks">Talks &amp; workshops</a>
+                    <a class="text-link" href="#consulting">Consulting</a>
+                    <a class="text-link" href="#feedback">Feedback</a>
+                </nav>
+            </div>
         </section>
 
+        <section class="catalog-section" id="courses" aria-labelledby="courses-title">
+            <div class="container">
+                <div class="catalog-heading">
+                    <h2 id="courses-title">Courses</h2>
+                    <p class="course-count" data-course-count role="status" aria-atomic="true">5 courses</p>
+                </div>
+                <fieldset class="course-filters" data-course-filters hidden>
+                    <legend class="sr-only">Filter courses by topic</legend>
+                    <label><input type="radio" name="topic" value="all" checked><span>All topics</span></label>
+                    <label><input type="radio" name="topic" value="ai"><span>AI</span></label>
+                    <label><input type="radio" name="topic" value="python"><span>Python</span></label>
+                    <label><input type="radio" name="topic" value="cloud"><span>Cloud</span></label>
+                    <label><input type="radio" name="topic" value="devops"><span>DevOps</span></label>
+                    <label><input type="radio" name="topic" value="kubernetes"><span>Kubernetes</span></label>
+                </fieldset>
+
+                <div class="course-list">
+                    <article class="course-row" id="ai-for-everyone" data-topic="ai" aria-labelledby="ai-title">
+                        <div class="course-meta">
+                            <span class="course-topic">Applied AI</span>
+                            <span class="course-level">Introductory</span>
+                        </div>
+                        <div class="course-main">
+                            <h3 id="ai-title">AI for Everyone</h3>
+                            <p>A practical introduction to AI, machine learning, and generative AI. Explore where these tools are useful, how to question their output, and where human judgement still matters.</p>
+                            <p class="course-audience"><strong>For:</strong> Curious professionals, researchers, and decision-makers. No coding background needed.</p>
+                        </div>
+                        <div class="course-outline">
+                            <details open>
+                                <summary>Course outline</summary>
+                                <ul>
+                                    <li>The differences between AI, machine learning, and generative AI.</li>
+                                    <li>Recognizing useful applications and evaluating results.</li>
+                                    <li>Limitations, bias, privacy, and responsible use.</li>
+                                </ul>
+                            </details>
+                            <a class="text-link" href="#contact">Discuss this course <span class="icon icon-arrow" aria-hidden="true"></span></a>
+                        </div>
+                    </article>
+
+                    <article class="course-row" id="programming-with-python" data-topic="python" aria-labelledby="python-title">
+                        <div class="course-meta">
+                            <span class="course-topic">Python</span>
+                            <span class="course-level">Foundations</span>
+                        </div>
+                        <div class="course-main">
+                            <h3 id="python-title">Programming with Python</h3>
+                            <p>Build a foundation in a language used across automation, data work, and application development. Start with the essentials and connect them to small, useful programs.</p>
+                            <p class="course-audience"><strong>For:</strong> New programmers and anyone looking to automate everyday tasks.</p>
+                        </div>
+                        <div class="course-outline">
+                            <details>
+                                <summary>Course outline</summary>
+                                <ul>
+                                    <li>Python syntax, data structures, functions, and modules.</li>
+                                    <li>Reading files, working with data, and handling errors.</li>
+                                    <li>Writing clear, reusable code for practical tasks.</li>
+                                </ul>
+                            </details>
+                            <a class="text-link" href="#contact">Discuss this course <span class="icon icon-arrow" aria-hidden="true"></span></a>
+                        </div>
+                    </article>
+
+                    <article class="course-row" id="aws-solutions-architecture" data-topic="cloud" aria-labelledby="aws-title">
+                        <div class="course-meta">
+                            <span class="course-topic">Cloud computing</span>
+                            <span class="course-level">Architecture</span>
+                        </div>
+                        <div class="course-main">
+                            <h3 id="aws-title">AWS Solutions Architecture</h3>
+                            <p>Explore how to design AWS workloads around reliability, security, performance, and cost. Work through service choices and architectural trade-offs, rather than just a list of cloud products.</p>
+                            <p class="course-audience"><strong>For:</strong> Developers and IT professionals building their understanding of cloud architecture.</p>
+                        </div>
+                        <div class="course-outline">
+                            <details>
+                                <summary>Course outline</summary>
+                                <ul>
+                                    <li>Core compute, storage, networking, and identity services.</li>
+                                    <li>Availability, security, and recovery considerations.</li>
+                                    <li>Cost-aware design and Well-Architected principles.</li>
+                                </ul>
+                            </details>
+                            <a class="text-link" href="#contact">Discuss this course <span class="icon icon-arrow" aria-hidden="true"></span></a>
+                        </div>
+                    </article>
+
+                    <article class="course-row" id="devops-practices" data-topic="devops" aria-labelledby="devops-title">
+                        <div class="course-meta">
+                            <span class="course-topic">DevOps</span>
+                            <span class="course-level">Practices &amp; delivery</span>
+                        </div>
+                        <div class="course-main">
+                            <h3 id="devops-title">DevOps Practices</h3>
+                            <p>Look beyond individual tools to the habits that make software delivery more dependable. Connect collaboration, automation, and feedback to the way your team develops and operates software.</p>
+                            <p class="course-audience"><strong>For:</strong> Development and operations teams improving their delivery workflow.</p>
+                        </div>
+                        <div class="course-outline">
+                            <details>
+                                <summary>Course outline</summary>
+                                <ul>
+                                    <li>Version control, continuous integration, and delivery pipelines.</li>
+                                    <li>Infrastructure as code, testing, and repeatable environments.</li>
+                                    <li>Observability, feedback loops, and shared ownership.</li>
+                                </ul>
+                            </details>
+                            <a class="text-link" href="#contact">Discuss this course <span class="icon icon-arrow" aria-hidden="true"></span></a>
+                        </div>
+                    </article>
+
+                    <article class="course-row" id="kubernetes-basics" data-topic="kubernetes" aria-labelledby="kubernetes-title">
+                        <div class="course-meta">
+                            <span class="course-topic">Platform engineering</span>
+                            <span class="course-level">Foundations</span>
+                        </div>
+                        <div class="course-main">
+                            <h3 id="kubernetes-title">Kubernetes Basics</h3>
+                            <p>Understand the building blocks of Kubernetes and how they fit together. Follow a containerized application from deployment to service discovery, configuration, and everyday troubleshooting.</p>
+                            <p class="course-audience"><strong>For:</strong> Developers and infrastructure practitioners with some familiarity with containers.</p>
+                        </div>
+                        <div class="course-outline">
+                            <details>
+                                <summary>Course outline</summary>
+                                <ul>
+                                    <li>Pods, deployments, services, and declarative configuration.</li>
+                                    <li>Application configuration, health checks, and scaling.</li>
+                                    <li>Inspecting workloads and troubleshooting common issues.</li>
+                                </ul>
+                            </details>
+                            <a class="text-link" href="#contact">Discuss this course <span class="icon icon-arrow" aria-hidden="true"></span></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section soft-section" id="talks" aria-labelledby="talks-title">
+            <div class="container">
+                <div class="section-top">
+                    <div>
+                        <h2 id="talks-title">A fresh perspective for your next gathering.</h2>
+                        <p>Technical talks and custom workshops for conferences, research groups, and teams. The subject and depth start with your audience.</p>
+                    </div>
+                </div>
+                <div class="offering-grid">
+                    <article class="offering">
+                        <h3>Applied AI in research &amp; practice</h3>
+                        <p>AI and machine learning in context: useful applications, responsible adoption, and the challenges behind AI-driven research and drug discovery.</p>
+                        <a class="text-link" href="#feedback">Read workshop feedback <span class="icon icon-arrow" aria-hidden="true"></span></a>
+                    </article>
+                    <article class="offering">
+                        <h3>The engineering behind AI platforms</h3>
+                        <p>Kubernetes, GPU workloads, software delivery, and the practical lessons of building platforms that support machine learning.</p>
+                        <a class="text-link" href="profile.html#talks">Watch previous talks <span class="icon icon-arrow" aria-hidden="true"></span></a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="consulting" aria-labelledby="consulting-title">
+            <div class="container offering-grid">
+                <div class="offering">
+                    <p class="eyebrow">Technical consulting</p>
+                    <h2 id="consulting-title">Work through the decisions that matter.</h2>
+                    <p>Sometimes your team needs a focused conversation rather than a full course. Consulting and custom workshops make room for your own systems, constraints, and questions.</p>
+                    <a class="text-link" href="#contact">Discuss your challenge <span class="icon icon-arrow" aria-hidden="true"></span></a>
+                </div>
+                <div class="offering">
+                    <h3>Areas we can work on</h3>
+                    <ul>
+                        <li><strong>Software design:</strong> maintainability, interfaces, testing, and development practices.</li>
+                        <li><strong>Applied AI:</strong> use cases, limitations, and the infrastructure behind them.</li>
+                        <li><strong>AWS &amp; Azure:</strong> cloud architecture and operational trade-offs.</li>
+                        <li><strong>DevOps:</strong> delivery pipelines, automation, and observability.</li>
+                        <li><strong>Platform engineering:</strong> Kubernetes and platforms for developer and ML workloads.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section soft-section" id="feedback" aria-labelledby="feedback-title">
+            <div class="container">
+                <h2 id="feedback-title">From people I've worked with.</h2>
+                <div class="testimonial">
+                    <img class="testimonial-logo" src="../img/ucph-logo.png" alt="University of Copenhagen" width="120" height="140" loading="lazy">
+                    <div>
+                        <figure>
+                            <blockquote>
+                                <p>&ldquo;He was spot on and had prepared a very nice interactive workshop. He was engaging and even stayed for longer answering all the questions we had.&rdquo;</p>
+                            </blockquote>
+                            <figcaption>
+                                <strong>Kristina Benedikte V Døssing</strong>
+                                Assistant Professor, PhD Coordinator<br>
+                                Medical and Molecular Imaging Graduate Program, University of Copenhagen<br>
+                                PhD School Symposium, May 2025
+                            </figcaption>
+                        </figure>
+                        <details class="testimonial-original">
+                            <summary>Read the full workshop feedback</summary>
+                            <blockquote>
+                                <p>&ldquo;We had the great pleasure of Gustav coming to our PhD School Symposium May 2025 and host a workshop on AI/ML and how it is used in big pharma. From start to finish Gustav was very professional and tailored his workshop to the topics that we knew we wanted to learn about - and then some. He was spot on and had prepared a very nice interactive workshop. He was engaging and even stayed for longer answering all the questions we had. I would highly recommend hiring Gustav for a unique insight in AI/ ML and research in big pharma!&rdquo;</p>
+                            </blockquote>
+                        </details>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="course-meta">
+                        <span class="course-topic">Professional recommendation</span>
+                        <span class="course-level">September 2025</span>
+                    </div>
+                    <div>
+                        <figure>
+                            <blockquote>
+                                <p>&ldquo;Gustav brings positive energy and an eagerness to make a real difference and likes a tough challenge.&rdquo;</p>
+                            </blockquote>
+                            <figcaption>
+                                <strong>Thomas D. Miller</strong>
+                                Global Innovation Leader<br>
+                                LinkedIn recommendation, 16 September 2025
+                            </figcaption>
+                        </figure>
+                        <details class="testimonial-original">
+                            <summary>Read the full recommendation</summary>
+                            <blockquote>
+                                <p>&ldquo;Gustav is a highly valued colleague and IT infrastructure professional that has been working with advanced compute and storage infrastructure supporting Novo Nordisk research. Gustav brings positive energy and an eagerness to make a real difference and likes a tough challenge. On top of his regular IT tasks, Gustav has also been a front runner towards quantum computing to assess when to get on board. A great add to any professional IT team wanting to be in front.&rdquo;</p>
+                            </blockquote>
+                            <a class="text-link" href="../img/miller.JPG" target="_blank" rel="noopener noreferrer">View the original recommendation <span class="icon icon-arrow" aria-hidden="true"></span></a>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" aria-labelledby="questions-title">
+            <div class="container">
+                <h2 id="questions-title">A few practical questions.</h2>
+                <div class="faq">
+                    <details>
+                        <summary>Can we tailor a course or workshop?</summary>
+                        <p>Yes. The starting point is your team's background, the problems you work on, and what you want to learn. A custom workshop can also bring several topics together.</p>
+                    </details>
+                    <details>
+                        <summary>Are courses online or in person?</summary>
+                        <p>Both options are available. We can discuss which format suits your group and the subject.</p>
+                    </details>
+                    <details>
+                        <summary>What about timing and pricing?</summary>
+                        <p>These depend on the scope and format. Let's discuss your audience, learning goals, and preferred dates to put together a suitable engagement.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section" id="contact" aria-labelledby="contact-title">
+            <div class="container contact-inner">
+                <div>
+                    <h2 id="contact-title">Let's shape the right session.</h2>
+                    <p>A course, a workshop, or a technical challenge. Start with what your team needs.</p>
+                </div>
+                <a class="button button-light" href="https://www.linkedin.com/in/gustav-collin-rasmussen/" target="_blank" rel="noopener noreferrer">Let's talk on LinkedIn <span class="icon icon-arrow" aria-hidden="true"></span></a>
+            </div>
+        </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Gustav Rasmussen. All rights reserved.</p>
-
-        <p>
-            Connect with me on
-            <a href="https://www.linkedin.com/in/gustav-collin-rasmussen/" target="_blank">LinkedIn</a>.
-        </p>
-
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; 2025&ndash;<span data-year>2026</span> Gustav Rasmussen. New Think Tank.</p>
+            <div class="footer-links">
+                <a href="https://github.com/TheNewThinkTank" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.linkedin.com/in/gustav-collin-rasmussen/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
+        </div>
     </footer>
-
 </body>
-
 </html>
