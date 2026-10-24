@@ -1,6 +1,11 @@
 
 .DS_Store
 
+# Browser test dependencies and reports
+node_modules/
+/test-results/
+/playwright-report/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

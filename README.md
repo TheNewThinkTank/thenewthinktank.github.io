@@ -36,6 +36,11 @@ message is selected for manual copying. Unknown course IDs use the general
 inquiry. Shared URLs contain the course choice, not custom message text.
 Messages are not submitted by this site.
 
+Edited drafts, including blank messages, are remembered separately for each
+course and for the general inquiry while navigating within the page. This
+includes Back/Forward navigation. Drafts stay in memory for the page visit;
+the site does not write them to browser storage.
+
 Theme selection runs before the stylesheet loads. Without a saved choice,
 the site follows the device's light or dark preference and responds to
 preference changes. The theme button saves an explicit choice that takes
@@ -43,17 +48,35 @@ priority over the device preference. Page controls initialize after parsing.
 
 ## Checks
 
+The browser regression suite is development-only and uses Chromium. It
+requires Node.js 20 or newer and Python 3. Install the test tooling once:
+
 ```sh
-node --check js/main.js
+npm ci
+npx playwright install chromium --only-shell
 ```
 
-Check all three pages at mobile, tablet, and desktop widths. Verify course
-filters and shared filter URLs, keyboard navigation, expandable outlines,
-and theme persistence between pages. Check the catalog with JavaScript
-disabled as well. Verify both device theme preferences on a first visit,
-saved light and dark overrides, and unavailable browser storage.
-Check course inquiry deep links, Back/Forward navigation, clearing the
-selection, and clipboard success and failure behavior.
+Run syntax and browser checks with:
+
+```sh
+npm test
+```
+
+The suite starts its own HTTP server on port 4180 and stops it afterward.
+If that port is busy, run `TEST_PORT=4181 npm test` instead. It uses isolated
+browser contexts and clipboard fixtures, without changing the system
+clipboard or sending inquiries to LinkedIn.
+
+[tests/site.spec.js](tests/site.spec.js) covers per-course and general drafts,
+empty drafts, history navigation, topic filters, system and saved themes,
+blocked storage, copy success and failure, complete default messages at
+320/375/1440 pixels, sharing metadata, and the JavaScript-disabled fallback.
+[playwright.config.js](playwright.config.js) contains the test-only server
+and browser settings. Test failures retain screenshots and traces under
+the ignored test-results directory.
+
+Use the HTTP preview above for visual checks. The website still requires
+no build step or npm packages to preview or deploy.
 
 ## Sharing Previews
 

@@ -114,6 +114,7 @@
             const defaultTitle = inquiryTitle.textContent;
             const defaultDescription = description.textContent;
             const defaultMessage = message.value;
+            const drafts = new Map();
             let activeCourse;
             const courseTitles = new Map([...document.querySelectorAll(".course-row")].map(course => [
                 course.id,
@@ -128,7 +129,8 @@
                 inquiryTitle.textContent = title ? `Let's discuss ${title}.` : defaultTitle;
                 description.textContent = title ? "Let's discuss your audience, goals, and preferred format for this course." : defaultDescription;
                 if (activeCourse !== selection) {
-                    message.value = title ? `Hi Gustav,\n\nI'm interested in ${title}. Could we discuss the audience, format, and availability?\n\nThanks!` : defaultMessage;
+                    if (activeCourse !== undefined) drafts.set(activeCourse, message.value);
+                    message.value = drafts.has(selection) ? drafts.get(selection) : title ? `Hi Gustav,\n\nI'm interested in ${title}. Could we discuss the audience, format, and availability?\n\nThanks!` : defaultMessage;
                     activeCourse = selection;
                     status.textContent = "";
                 }
