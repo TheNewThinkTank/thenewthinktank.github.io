@@ -4,6 +4,18 @@ const catalog = "/html/catalog.html";
 const inquiry = page => page.getByRole("textbox", { name: "Your inquiry" });
 const courseLink = (page, course) => page.locator(`#${course} [data-course-inquiry]`);
 
+test("publishes the confirmed course duration, languages and group sizes", async ({ page }) => {
+    await page.goto(catalog);
+    await expect(page.locator(".delivery-note")).toContainText("2\u20138 hours");
+    await expect(page.locator(".delivery-note")).toContainText("Danish and/or English");
+    await expect(page.locator(".delivery-note")).toContainText("Any group size");
+    await page.getByText("What about timing and pricing?", { exact: true }).click();
+    const answer = page.locator(".faq details[open]");
+    await expect(answer).toContainText("2\u20138 hours");
+    await expect(answer).toContainText("Danish and/or English");
+    await expect(answer).toContainText("any group size");
+});
+
 test("retains separate course and general drafts through history navigation", async ({ page }) => {
     await page.goto(catalog);
     await inquiry(page).fill("My general inquiry.");

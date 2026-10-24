@@ -29,6 +29,9 @@ security rules.
 The catalog remains readable with JavaScript disabled. Its course outlines
 and feedback use native HTML disclosures. Prices and dates are not hardcoded.
 
+Courses run for 2-8 hours, are available in Danish and/or English, and can
+accommodate any group size. Delivery is available online or in person.
+
 Course inquiry links retain a known course ID in `?course=...#contact`.
 The contact section builds an editable message from the catalog title and
 supports copying it before opening LinkedIn. If clipboard access fails, the
@@ -64,7 +67,7 @@ Run syntax and browser checks with:
 npm test
 ```
 
-This runs the same 14 regressions in each engine, for 42 browser checks.
+This runs the same 15 regressions in each engine, for 45 browser checks.
 For a quicker single-browser run, use `npm test -- --project=chromium`
 (or `firefox` or `webkit`). WebKit coverage is engine testing, not a
 substitute for testing on a physical Safari/iOS device.
@@ -74,7 +77,8 @@ If that port is busy, run `TEST_PORT=4181 npm test` instead. It uses isolated
 browser contexts and clipboard fixtures, without changing the system
 clipboard or sending inquiries to LinkedIn.
 
-[tests/site.spec.js](tests/site.spec.js) covers per-course and general drafts,
+[tests/site.spec.js](tests/site.spec.js) covers confirmed course logistics,
+per-course and general drafts,
 empty drafts, history navigation, topic filters, system and saved themes,
 blocked storage, copy success and failure, complete default messages at
 320/375/1440 pixels, sharing metadata, and the JavaScript-disabled fallback.
@@ -97,6 +101,17 @@ pinned to immutable revisions, and does not retain checkout credentials.
 Newer runs cancel older runs for the same workflow and Git ref. Failed jobs
 upload available screenshots and traces for seven days. This workflow only
 tests the site; it does not build or deploy it.
+
+## Dependency Updates
+
+[.github/dependabot.yml](.github/dependabot.yml) configures weekly update
+pull requests for npm dependencies and pinned GitHub Actions. Checks are
+scheduled for Mondays at 08:00 UTC, with at most five open update PRs per
+ecosystem and conventional commit prefixes.
+
+GitHub activates the configuration once it reaches the default branch.
+Updates are proposed for review, not automatically merged; the browser CI
+workflow checks the resulting pull requests.
 
 ## Sharing Previews
 
